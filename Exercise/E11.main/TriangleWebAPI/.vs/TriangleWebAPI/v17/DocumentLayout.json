@@ -1,0 +1,70 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\0\u00261\\Wenet\\Exercise\\E11.main\\TriangleWebAPI\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{6DEDECD3-B4AE-4D50-994D-8F637A25DCEE}|TriangleWebAPI\\TriangleWebAPI.csproj|C:\\Users\\0\u00261\\Wenet\\Exercise\\E11.main\\TriangleWebAPI\\trianglewebapi\\models\\triangleperimetercalculator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6DEDECD3-B4AE-4D50-994D-8F637A25DCEE}|TriangleWebAPI\\TriangleWebAPI.csproj|solutionrelative:trianglewebapi\\models\\triangleperimetercalculator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6DEDECD3-B4AE-4D50-994D-8F637A25DCEE}|TriangleWebAPI\\TriangleWebAPI.csproj|c:\\users\\0\u00261\\wenet\\exercise\\e11.main\\trianglewebapi\\trianglewebapi\\controllers\\geocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6DEDECD3-B4AE-4D50-994D-8F637A25DCEE}|TriangleWebAPI\\TriangleWebAPI.csproj|solutionrelative:trianglewebapi\\controllers\\geocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6DEDECD3-B4AE-4D50-994D-8F637A25DCEE}|TriangleWebAPI\\TriangleWebAPI.csproj|C:\\Users\\0\u00261\\Wenet\\Exercise\\E11.main\\TriangleWebAPI\\trianglewebapi\\app_start\\webapiconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6DEDECD3-B4AE-4D50-994D-8F637A25DCEE}|TriangleWebAPI\\TriangleWebAPI.csproj|solutionrelative:trianglewebapi\\app_start\\webapiconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "WebApiConfig.cs",
+              "DocumentMoniker": "C:\\Users\\0\u00261\\Wenet\\Exercise\\E11.main\\TriangleWebAPI\\TriangleWebAPI\\App_Start\\WebApiConfig.cs",
+              "RelativeDocumentMoniker": "TriangleWebAPI\\App_Start\\WebApiConfig.cs",
+              "ToolTip": "C:\\Users\\0\u00261\\Wenet\\Exercise\\E11.main\\TriangleWebAPI\\TriangleWebAPI\\App_Start\\WebApiConfig.cs",
+              "RelativeToolTip": "TriangleWebAPI\\App_Start\\WebApiConfig.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABIAAAA4AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-10T12:05:44.048Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "TrianglePerimeterCalculator.cs",
+              "DocumentMoniker": "C:\\Users\\0\u00261\\Wenet\\Exercise\\E11.main\\TriangleWebAPI\\TriangleWebAPI\\Models\\TrianglePerimeterCalculator.cs",
+              "RelativeDocumentMoniker": "TriangleWebAPI\\Models\\TrianglePerimeterCalculator.cs",
+              "ToolTip": "C:\\Users\\0\u00261\\Wenet\\Exercise\\E11.main\\TriangleWebAPI\\TriangleWebAPI\\Models\\TrianglePerimeterCalculator.cs",
+              "RelativeToolTip": "TriangleWebAPI\\Models\\TrianglePerimeterCalculator.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-10T11:55:45.31Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "GeoController.cs",
+              "DocumentMoniker": "C:\\Users\\0\u00261\\Wenet\\Exercise\\E11.main\\TriangleWebAPI\\TriangleWebAPI\\Controllers\\GeoController.cs",
+              "RelativeDocumentMoniker": "TriangleWebAPI\\Controllers\\GeoController.cs",
+              "ToolTip": "C:\\Users\\0\u00261\\Wenet\\Exercise\\E11.main\\TriangleWebAPI\\TriangleWebAPI\\Controllers\\GeoController.cs",
+              "RelativeToolTip": "TriangleWebAPI\\Controllers\\GeoController.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAAwBYAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-10T11:53:27.771Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
