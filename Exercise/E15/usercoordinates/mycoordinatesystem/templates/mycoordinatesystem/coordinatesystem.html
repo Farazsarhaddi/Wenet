@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Submit Location</title>
+    <style>
+        /* General page styling */
+        body {
+            font-family: Arial, sans-serif; /* Set a clean font style */
+            background-color: #f0f8ff; /* Light background color for better readability */
+            margin: 0;
+            padding: 0;
+            display: flex; /* Center the content vertically and horizontally */
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh; /* Full viewport height */
+        }
+
+        h1 {
+            color: #333; /* Darker text color for better contrast */
+        }
+
+        /* Styling for the form container */
+        form {
+            background-color: #ffffff; /* White background for form */
+            padding: 20px; /* Space inside the form */
+            border-radius: 8px; /* Rounded corners */
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+            width: 300px; /* Fixed width for the form */
+            display: flex; /* Flexbox for alignment */
+            flex-direction: column;
+            align-items: center;
+        }
+
+        /* Styling for form labels */
+        label {
+            margin-bottom: 10px; /* Space below the label */
+            font-weight: bold; /* Bold text for emphasis */
+            color: #555; /* Slightly darker text */
+        }
+
+        /* Styling for input fields */
+        input[type="text"] {
+            width: 100%; /* Full width of the form container */
+            padding: 10px; /* Space inside the input field */
+            margin-bottom: 15px; /* Space below the input field */
+            border: 1px solid #ccc; /* Light border color */
+            border-radius: 4px; /* Slightly rounded corners */
+        }
+
+        /* Styling for the submit button */
+        button {
+            padding: 10px 20px; /* Button size */
+            background-color: #007bff; /* Primary blue color */
+            color: white; /* White text for contrast */
+            border: none; /* No border */
+            border-radius: 4px; /* Rounded corners */
+            cursor: pointer; /* Pointer cursor for interactivity */
+            transition: background-color 0.3s ease; /* Smooth color transition on hover */
+        }
+
+        /* Change button background on hover */
+        button:hover {
+            background-color: #0056b3; /* Darker blue */
+        }
+
+        /* Responsive styling for small screens */
+        @media (max-width: 600px) {
+            form {
+                width: 90%; /* Adjust form width for smaller devices */
+            }
+
+            h1 {
+                font-size: 1.5rem; /* Reduce heading size */
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Page heading -->
+    <h1>Submit Your Location</h1>
+
+    <!-- Form for submitting latitude and longitude -->
+    <form id="locationForm">
+        <!-- Latitude input -->
+        <label for="latitude">Latitude:</label>
+        <input type="text" id="latitude" name="latitude" required>
+
+        <!-- Longitude input -->
+        <label for="longitude">Longitude:</label>
+        <input type="text" id="longitude" name="longitude" required>
+
+        <!-- Submit button -->
+        <button type="button" onclick="submitLocation()">Submit</button>
+    </form>
+
+    <script>
+        // Function to handle form submission
+        async function submitLocation() {
+            // Get input values from the form
+            const latitude = document.getElementById('latitude').value;
+            const longitude = document.getElementById('longitude').value;
+
+            // Validate input to ensure they are numbers
+            if (isNaN(latitude) || isNaN(longitude)) {
+                alert("Please enter valid numbers for latitude and longitude.");
+                return;
+            }
+
+            try {
+                // Send a POST request to the server with the input data
+                const response = await fetch('/save-location/', {
+                    method: 'POST', // HTTP method
+                    headers: {
+                        'Content-Type': 'application/json', // Indicate JSON data is being sent
+                    },
+                    body: JSON.stringify({ latitude, longitude }), // Convert input data to JSON
+                });
+
+                // Parse the server's response
+                const result = await response.json();
+
+                // Display the server's message to the user
+                alert(result.message);
+            } catch (error) {
+                // Handle errors (e.g., network issues)
+                alert("An error occurred while submitting the location.");
+            }
+        }
+    </script>
+</body>
+</html>
