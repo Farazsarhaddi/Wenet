@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>محاسبه محیط مثلث</title>
+    <script>
+        function calculatePerimeter() {
+            // گرفتن داده‌ها از فرم
+            const lat1 = parseFloat(document.getElementById('lat1').value);
+            const lon1 = parseFloat(document.getElementById('lon1').value);
+            const lat2 = parseFloat(document.getElementById('lat2').value);
+            const lon2 = parseFloat(document.getElementById('lon2').value);
+            const lat3 = parseFloat(document.getElementById('lat3').value);
+            const lon3 = parseFloat(document.getElementById('lon3').value);
+
+            // ارسال داده‌ها به API Django
+            fetch('http://127.0.0.1:8000/api/perimeter/', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    lat1: lat1,
+                    lon1: lon1,
+                    lat2: lat2,
+                    lon2: lon2,
+                    lat3: lat3,
+                    lon3: lon3
+                })
+            })
+            .then(response => response.json())
+            .then(data => {
+                // نمایش محیط مثلث
+                document.getElementById('result').innerText = 'محیط مثلث: ' + data.perimeter + ' کیلومتر';
+            })
+            .catch(error => {
+                console.error('Error:', error);
+            });
+        }
+    </script>
+</head>
+<body>
+    <h1>محاسبه محیط مثلث با فرمول هاروو سین</h1>
+    <form onsubmit="event.preventDefault(); calculatePerimeter();">
+        <label for="lat1">عرض جغرافیایی نقطه اول:</label>
+        <input type="number" id="lat1" step="any" required>
+        <label for="lon1">طول جغرافیایی نقطه اول:</label>
+        <input type="number" id="lon1" step="any" required><br>
+
+        <label for="lat2">عرض جغرافیایی نقطه دوم:</label>
+        <input type="number" id="lat2" step="any" required>
+        <label for="lon2">طول جغرافیایی نقطه دوم:</label>
+        <input type="number" id="lon2" step="any" required><br>
+
+        <label for="lat3">عرض جغرافیایی نقطه سوم:</label>
+        <input type="number" id="lat3" step="any" required>
+        <label for="lon3">طول جغرافیایی نقطه سوم:</label>
+        <input type="number" id="lon3" step="any" required><br>
+
+        <button type="submit">محاسبه محیط</button>
+    </form>
+
+    <h2 id="result"></h2>
+</body>
+</html>
