@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTTP Cats Viewer</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>HTTP Cats Viewer (IIS)</h1>
+    <p>Enter an HTTP Response Code to see the corresponding cat image:</p>
+    <input type="number" id="responseCode" placeholder="e.g., 404, 200" />
+    <button onclick="fetchCatImage()">Get Cat Image</button>
+    <div id="result">
+        <p id="message"></p>
+        <img id="catImage" src="" alt="" style="display: none;" />
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
