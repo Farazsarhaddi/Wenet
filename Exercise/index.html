@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>WebAR - تعیین شعاع 20 متری</title>
+    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+    <script src="https://rawcdn.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.min.js"></script>
+    <script src="https://rawcdn.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-gps-camera.min.js"></script>
+    <script src="https://rawcdn.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-gps-entity-place.min.js"></script>
+  </head>
+  <body style="margin: 0; overflow: hidden;">
+    <a-scene embedded arjs="sourceType: webcam; debugUIEnabled: false;">
+      <a-camera gps-camera rotation-reader></a-camera>
+
+      <!-- مکان دانشکده -->
+      <a-box
+        gps-entity-place="latitude: 35.725474; longitude: 51.386269;"
+        material="color: red;"
+        scale="2 2 2">
+      </a-box>
+
+      <!-- شعاع 20 متری -->
+      <a-circle
+        gps-entity-place="latitude: 35.7023; longitude: 51.3518;"
+        radius="20"
+        material="color: rgba(0, 0, 255, 0.3); opacity: 0.5;"
+        rotation="-90 0 0">
+      </a-circle>
+    </a-scene>
+  </body>
+</html>
